@@ -1,10 +1,7 @@
 package com.danosoftware.spring_boot_logging.masking;
 
 import java.lang.reflect.Field;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.IdentityHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class SensitiveDataMasker {
 
@@ -48,7 +45,7 @@ public class SensitiveDataMasker {
     }
 
     private static Map<String, Object> maskObjectFields(Object object, Map<Object, Boolean> visited) {
-        Map<String, Object> maskedFields = new HashMap<>();
+        Map<String, Object> maskedFields = new LinkedHashMap<>();
         Field[] fields = object.getClass().getDeclaredFields();
 
         for (Field field : fields) {
@@ -69,7 +66,7 @@ public class SensitiveDataMasker {
     }
 
     private static Collection<Object> maskCollection(Collection<?> collection, Map<Object, Boolean> visited) {
-        Collection<Object> masked = new java.util.ArrayList<>();
+        Collection<Object> masked = new ArrayList<>();
         for (Object item : collection) {
             masked.add(mask(item, visited));
         }
@@ -77,7 +74,7 @@ public class SensitiveDataMasker {
     }
 
     private static Collection<Object> maskArray(Object[] array, Map<Object, Boolean> visited) {
-        Collection<Object> masked = new java.util.ArrayList<>();
+        Collection<Object> masked = new ArrayList<>();
         for (Object item : array) {
             masked.add(mask(item, visited));
         }

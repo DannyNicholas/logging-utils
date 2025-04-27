@@ -37,5 +37,18 @@ public class MaskingTest {
 
         List<String> list = List.of("a", "b", "c", "d");
         log.info("List: {}", list);
+
+        User user2 = User.builder()
+                .id("id2")
+                .name("my-name2")
+                .password("my-password2")
+                .address(Address.builder().road("my-road2").postCode("my-postoce2").build())
+                .build();
+
+        log.info("Multiple Users: {} - {}", user, user2);
+
+        List<User> users = List.of(user, user2);
+        log.info("List of users: {}", users);
+
     }
 }
