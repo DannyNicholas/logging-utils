@@ -1,6 +1,6 @@
 package com.danosoftware.spring_boot_logging;
 
-import com.danosoftware.spring_boot_logging.masking.LogbackInitializer;
+import com.danosoftware.spring_boot_logging.masking.MaskedLoggerInitializer;
 import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +14,7 @@ public class SpringBootLoggingApplication {
 
     @PostConstruct
     public void init() {
-        LogbackInitializer.init();
+        MaskedLoggerInitializer.init();
     }
 
 }

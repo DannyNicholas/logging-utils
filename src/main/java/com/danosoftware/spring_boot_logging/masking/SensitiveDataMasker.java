@@ -1,8 +1,23 @@
 package com.danosoftware.spring_boot_logging.masking;
 
+import lombok.experimental.UtilityClass;
+
 import java.lang.reflect.Field;
 import java.util.*;
 
+/**
+ * Logging helper class that ensures when logging objects, any fields annotated with @Sensitive will be masked.
+ * <p>
+ * Fields will also be masked if the objects are contained within a collection such as a List, Set or Map.
+ * <p>
+ * Fields will also be masked if the object is nested within another object.
+ * <p>
+ * Example:
+ * If a class contains the field "password", which is annotated with @Sensitive,
+ * when an object instance of this class is logged, the output will look like:
+ * {id=id, userName=my-user, password=***}
+ */
+@UtilityClass
 public class SensitiveDataMasker {
 
     private static final String MASK = "***";

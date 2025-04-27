@@ -7,6 +7,9 @@ import lombok.NonNull;
 
 import java.util.Arrays;
 
+/**
+ * Logging layout that will mask any sensitive fields contained within objects passed to the logger.
+ */
 public class MaskingLayout extends LayoutBase<ILoggingEvent> {
 
     // pattern layout delegate holding our logging pattern
