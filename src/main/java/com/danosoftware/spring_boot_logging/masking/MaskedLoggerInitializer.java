@@ -22,7 +22,7 @@ import java.util.Iterator;
  */
 @Slf4j
 @UtilityClass
-public class LogbackInitializer {
+public class MaskedLoggerInitializer {
 
     private final static String DEFAULT_LOGGING_PATTERN = "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n";
 
