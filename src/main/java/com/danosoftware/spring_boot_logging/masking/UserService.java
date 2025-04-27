@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @Slf4j
 public class UserService {
@@ -25,6 +27,9 @@ public class UserService {
         log.info(user.toString());
 //        log.info(mapper.writeValueAsString(user));
 
-        log.info("Name: {}", Box.builder().id("123").build());
+        log.info("Box: {}", Box.builder().id("123").build());
+
+        List<String> list = List.of("a", "b", "c", "d");
+        log.info("List: {}", list);
     }
 }
