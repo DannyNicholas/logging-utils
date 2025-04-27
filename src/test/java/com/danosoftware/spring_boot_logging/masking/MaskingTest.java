@@ -1,6 +1,5 @@
 package com.danosoftware.spring_boot_logging.masking;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -42,7 +41,7 @@ public class MaskingTest {
     }
 
     @Test
-    public void test() throws JsonProcessingException {
+    public void test() {
         User user = User.builder()
                 .id("id")
                 .name("my-name")
