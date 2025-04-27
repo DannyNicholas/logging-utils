@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="CUSTOM" class="com.danosoftware.spring_boot_logging.masking.CustomLogAppender" />
+
+    <root level="INFO">
+        <appender-ref ref="CUSTOM" />
+    </root>
+
+</configuration>
