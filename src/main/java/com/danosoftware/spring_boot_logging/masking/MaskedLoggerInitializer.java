@@ -60,8 +60,9 @@ public class MaskedLoggerInitializer {
     }
 
     /**
-     * We want our customised logger to re-use the existing logging pattern.
+     * We want our customised logger to re-use the application's existing logging pattern.
      * This is provided to the application at run-time.
+     * Typically, this comes from the application's "logback-spring.xml" file (in resources folder).
      * <p>
      * We will iterate through all existing appenders and return the logging pattern.
      * <p>
