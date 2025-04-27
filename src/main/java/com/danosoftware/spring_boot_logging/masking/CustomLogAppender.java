@@ -1,7 +1,7 @@
 package com.danosoftware.spring_boot_logging.masking;
 
-import ch.qos.logback.core.AppenderBase;
 import ch.qos.logback.classic.spi.ILoggingEvent;
+import ch.qos.logback.core.AppenderBase;
 
 import java.lang.reflect.Field;
 

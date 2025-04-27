@@ -2,9 +2,6 @@ package com.danosoftware.spring_boot_logging.masking;
 
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
-import ch.qos.logback.classic.joran.JoranConfigurator;
-import ch.qos.logback.classic.layout.TTLLLayout;
-import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.ConsoleAppender;
 import ch.qos.logback.core.encoder.LayoutWrappingEncoder;
 import org.slf4j.LoggerFactory;
@@ -54,7 +51,6 @@ public class LogbackInitializer {
         System.out.println("[LogbackInitializer] Masking console appender initialized.");
 
 
-
 //        LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
 //
 ////        ConsoleAppender<ILoggingEvent> consoleAppender = new ConsoleAppender<>();
@@ -88,7 +84,6 @@ public class LogbackInitializer {
 //        Logger rootLogger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
 //        rootLogger.addAppender(consoleAppender);
 //
-
 
 
 //        // 1. Create your custom appender

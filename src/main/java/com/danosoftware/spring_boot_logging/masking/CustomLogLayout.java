@@ -15,7 +15,6 @@ public class CustomLogLayout extends LayoutBase<ILoggingEvent> {
         String message = event.getFormattedMessage();
 
 
-
         String originalMessage = event.getFormattedMessage();
 
         // Modify the message: add a prefix
